@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/trivial_pr.dir/trivial_pr.cpp.o -o trivial_pr  -Wl,-rpath,/usr/local/lib /usr/local/lib/libseal.4.0.0.dylib 

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/vector_pr.dir/vector_pr.cpp.o -o vector_pr  -Wl,-rpath,/usr/local/lib /usr/local/lib/libseal.4.0.0.dylib 
