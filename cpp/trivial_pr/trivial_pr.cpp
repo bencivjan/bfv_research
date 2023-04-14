@@ -151,15 +151,11 @@ Ciphertext server_compute(vector<Plaintext>& data, vector<Ciphertext>& client_ar
     Ciphertext out_data;
     Ciphertext intermediate;
     evaluator->multiply_plain(client_array[0], data[0], out_data);
-    // cout << "Out_data budget: " << d->invariant_noise_budget(out_data) << endl;
     for (uint64_t i = 1; i < len; i++) {
         // ciphertext multiply
-        // cout << data[i].to_string() << endl;
         evaluator->multiply_plain(client_array[i], data[i], intermediate);
-        // cout << "intermediate budget: " << d->invariant_noise_budget(intermediate) << endl;
         // ciphertext add
         evaluator->add_inplace(out_data, intermediate);
-        // cout << "Out_data budget: " << d->invariant_noise_budget(out_data) << endl;
     }
     return out_data;
 }

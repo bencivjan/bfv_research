@@ -34,11 +34,9 @@ fn main() {
     timeit!("Database creation",
         for _i in 0..LEN {
             let rand_val: i64 = rng.gen_range(1..PLAIN_MOD).try_into().unwrap();
-            // print!("0x{:x}, ", rand_val);
             let p = Plaintext::try_encode(&[rand_val], Encoding::poly(), &parameters).unwrap();
             data.push(p);
         }
-        // println!("");
     );
 
     let mut client_vec = vec![ciphertext_0.clone(); LEN];
